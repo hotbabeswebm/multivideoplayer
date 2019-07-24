@@ -1,0 +1,144 @@
+video{
+	/*dimensiones landscape*/
+	max-width: 100%;
+	/*object-fit: initial;*/
+	
+	height: 100%;
+	/*centrar*/
+	display: inline-block;
+
+	position: relative; /*importante para botones hover*/
+}
+
+a {
+	color: #ade1fe;
+}
+a:visited {
+  color: #8bb487;
+}
+
+#right{
+	padding: 10px;
+}
+
+table.zones{
+	text-align:center;
+	margin: auto;
+	width: 100%;
+}
+
+tbody tr:nth-child(odd){
+  background-color: #141414;
+  color: #fff;
+}
+
+.video_overlays {
+    position:absolute;
+    max-width:5%;
+    max-height: 5%;
+    min-width:40px;
+    min-height:40px;
+    z-index:300000;
+    text-align:center;
+    display: none;
+}
+
+
+.replay {
+    transform: translate(150%, 0%);
+}
+
+.video_overlays:hover {
+	background-color: white;    
+}
+
+img.video_overlays.visible {
+	
+	display:inline;    
+}
+
+.one div, .two div, .four div, .nine div{
+	display: inline;
+	height: 100%;
+}
+.one > div:hover > .video_overlays, 
+.two > div:hover > .video_overlays,
+.four > div:hover > .video_overlays, 
+.nine > div:hover > .video_overlays  { display:inline;    }
+
+
+
+body{
+	
+	background-color: black;
+	color: white;
+
+}
+#left{
+
+	height: 100%;
+}
+
+.two video{
+	max-width: 49%;
+}
+
+.four video{
+	max-width: 49%;
+}
+
+.nine video{
+	max-width: 33%;
+}
+
+#main-zone{
+	background: ;
+	background-repeat: no-repeat,
+      no-repeat,no-repeat,no-repeat,no-repeat
+      no-repeat;
+  background-position: top right,
+  	  bottom right,
+      top left,
+      bottom left,
+      left,
+      right;
+}
+
+div#main-zone{
+	height: 100vh;
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+div#selection-zone{
+	text-align: center;
+}
+
+div.one{
+	height: 100%;
+	max-width:100%;
+	/*background-color: red;*/
+}
+
+/*landscape*/
+div.two{
+	height: 100%;
+	max-width:100%;
+}
+
+div.four{
+	height: 50vh;
+	max-width:100%;
+	text-align: center;
+}
+
+
+div.nine{
+	height: 33vh;
+	max-width:100%;
+	text-align: center;
+}
+
+

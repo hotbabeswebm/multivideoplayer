@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MultiVideoPlayer</title>
+	<link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg" sizes="any">
+	<meta charset="UTF-8">
+	<meta name="description" content="Play multiple videos at same time and same screen free.">
+	<meta name="keywords" content="multi,video,player,xxx,free,android,tablet,desktop">
+	<meta name="author" content="MultiVideoPlayer">
+
+	<link rel="stylesheet" type="text/css" href="/static/css/splits.css">
+	
+	<script async src="//d.smopy.com/d/?resource=pubJS"></script>
+
+	<script type="text/javascript" src="/static/js/jquery-3.4.0.min.js"></script>
+	<script type="text/javascript" src="/static/js/vue-2.6.10.min.js"></script>
+	<script type="text/javascript" src="/static/js/split-screen.js"></script><!---->
+	
+	<script type="text/javascript" src="/static/js/load-images-background.js"></script>
+	<script type="text/javascript" src="/static/js/local-videos-load.js"></script>
+	<script type="text/javascript" src="/static/js/external-videos-load.js"></script>
+	<script type="text/javascript" src="/static/js/video-control.js"></script>
+	
+	
+	
+</head>
+
+<body>
+
+	<div id="left">
+		<div id="selection-zone">
+			<h1><a href="/">MultiVideoPlayer</a><sup>alfa</sup></h1>
+			<div id='_1629838' class='_80515e7e'></div>
+			<p>Only <strike>MP4</strike>, WebM, and <strike>Ogg</strike> video are supported. Need to use landscape screen.</p>
+			<p><a href="/tutorial.html">Tutorial</a> | <a href="/problems.html">Problems</a></p>
+			
+
+			<table class="zones">
+	  			<tr><td>
+					<p class="local-zone">
+						<p>Local zone</p>
+						Select video: <input id="videos-input" type="file" multiple accept="video/*" />
+						Select image: <input id="images-input" type="file" multiple accept="image/*" />
+					</p>
+				</td></tr>
+				<tr><td>
+					<p class="external-zone">
+						<p>External zone</p>
+						<p>
+							<textarea id="url-list" rows="4" cols="50">list url videos here in differents lines (delete this)</textarea>
+							<button id="load-videos" type="button" onclick="loadVideosUrl();">Load videos</button>
+						</p>
+						<p>
+							<textarea id="url-scrape" rows="1" cols="50" onClick="this.select();" >search videos from one url (delete this)</textarea>
+							<button id="scrape-videos" type="button" onclick="scrapeVideos();">Load videos</button> 
+						</p>
+					</p>
+					<div id='_1630300' class='_80515e7e'></div>
+				</td></tr>
+				<tr><td>
+					<p class="control-zone">
+						<p>Control zone</p>
+						<button id="mute-video" onclick="toggleMuteVideo();">Un/mute all</button>
+						<button id="mute-video" onclick="pausePlayVideo();">Pause/Play all</button>
+						<select id="splits" onchange="number_splits()">
+						  <option value=1>1 video</option>
+						  <option value=2>2 videos</option>
+						  <option selected="selected" value=4>4 videos</option>
+						  <option value=9>9 videos</option>
+						</select> 
+						<a class="button" id="watch" href='#main-zone'>Scroll into view</a>
+						<p>Press F11 to fullscreen</p>
+					</p>
+				</td></tr>
+			</table>
+		</div>
+		<!--
+		<div id="app">
+			<h1>[[ message ]] [[json[0].id]]</h1>
+		</div>
+		-->
+		
+		<div id="main-zone">
+
+			
+	        	<div class="one"></div>
+	        
+		</div>
+	</div>
+	<div id="right">
+
+	</div>
+	<div id='_1629838' class='_80515e7e'></div>
+	
+	<script type="text/javascript" src="/static/js/scraper.js"></script>
+	<script type="text/javascript" src="/static/js/load-video-json.js"></script>
+</body>
+
+
+</html> 
